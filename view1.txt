@@ -1,0 +1,33 @@
+<mvc:View controllerName="com.sap.training1.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<!--//App has "backgroundColor" property and "pages" aggregation-->
+	<App id="idAppControl" > <!--backgroundColor="#ffeeff"-->
+		<!--// pages has "Page" Aggregation , notice the lowercase of pages and upperCase of Page.-->
+		<pages>
+			<!--//Page has properties like title, showNavButton,etc and aggregations like headerContent, content , footer-->
+			<Page title="{i18n>page0}" id="page1">
+				<headerContent>
+					<Button icon="sap-icon://action" tooltip="Share"/>
+					<!--// showing use of icon , explore sap icon explorer-->
+				</headerContent>
+				<content>
+					<!--// using tile with header, subheader property and "press" Event and handling it with a userDefined method., check that method in controller-->
+					<GenericTile header="Click on me" subheader="To visit next page" press="NavToNextPage"></GenericTile>
+					<!-- use class and add some sap defined css for margin here-->
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+					<!--	on press of this button eventHandler function,"routeToNextView" is invoked which is present in controller. Go check there- it's definition.-->
+						<Button text="Go to next view" type="Accept" press="routeToNextView"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		<!--	this page has navButton which will redirect it to the previous page, check definition of moveBack function in the controller--> 
+			<Page title="{i18n>page2}" id="page2" showNavButton="true" navButtonTap="moveBack">
+				<content>
+					<!--you add some content here..-->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
