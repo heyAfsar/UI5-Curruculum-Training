@@ -1,0 +1,49 @@
+	<!--displaying the data.json file in a table-->
+						<Table id="idProductsTable" noDataText="No Data" items="{product>/ProductCollection}">
+							<items>
+								<ColumnListItem counter="0">
+									<cells>
+										<ObjectIdentifier title="{product>Name}" text="{product>ProductId}"></ObjectIdentifier>
+										<Text text="{product>SupplierName}" maxLines="0"></Text>
+										<Text text="{product>Width} x {product>Depth} x {product>Height} {product>DimUnit}" maxLines="0"></Text>
+										<ObjectNumber number="{product>WeightMeasure}"/>
+										<ObjectNumber number="{product>Price}" unit="{product>CurrencyCode}"></ObjectNumber>
+									</cells>
+								</ColumnListItem>
+							</items>
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Label text="Products"></Label>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column width="12em">
+									<header>
+										<Text text="Product" maxLines="0"></Text>
+									</header>
+								</Column>
+								<Column minScreenWidth="tablet" demandPopin="true">
+									<header>
+										<Text text="Supplier" maxLines="0"></Text>
+									</header>
+								</Column>
+								<Column hAlign="Right" minScreenWidth="tablet" demandPopin="true">
+									<header>
+										<Text text="Dimensions" maxLines="0"></Text>
+									</header>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="tablet" demandPopin="true">
+									<header>
+										<Text text="Weight" maxLines="0"></Text>
+									</header>
+								</Column>
+								<Column hAlign="Right">
+									<header>
+										<Text text="Price" textAlign="Right" maxLines="0"></Text>
+									</header>
+								</Column>
+							</columns>
+						</Table>
+						
