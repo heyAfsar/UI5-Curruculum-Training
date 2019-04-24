@@ -2,5 +2,3 @@
 
 Resources and Reference Materials on JavaScript and SAP UI5 for Curruculum Training from 15th - 17th April,2019
 
-<a href="https://www.w3schools.com" target="_blank !important">Visit W3Schools.com!</a> 
-  
